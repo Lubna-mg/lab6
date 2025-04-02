@@ -1,3 +1,8 @@
+﻿# apps/usermodule/views.py
+
 from django.shortcuts import render
 
-# Create your views here.
+# تعريف دالة profile_view
+def profile_view(request):
+    return render(request, 'profile.html')
+

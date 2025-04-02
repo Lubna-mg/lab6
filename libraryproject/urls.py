@@ -1,4 +1,4 @@
-"""
+﻿"""
 URL configuration for libraryproject project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -14,14 +14,14 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
-import apps.bookmodule.views
-from django.urls import path, include
+# libraryproject/urls.py
 
+from django.contrib import admin
+from django.urls import path, include  # تأكد من استيراد `include`
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('books/', include("apps.bookmodule.urls")), #include urls.py of bookmodule app
-    path('users/', include("apps.usermodule.urls"))  #include urls.py of usermodule app
-   
+    path('admin/', admin.site.urls),  # مسار لوحة التحكم
+    path('books/', include('apps.bookmodule.urls')),  # ربط المسار مع تطبيق books
+    path('users/', include('apps.usermodule.urls')),  # ربط المسار مع تطبيق users
 ]
+

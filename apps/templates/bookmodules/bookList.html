@@ -2,7 +2,6 @@
 {% load static %}
 {% block title %} The Book List {% endblock title %}
 {% block stylesheets %}
-<!-- هنا تم تحسين تصميم الجدول -->
 <style>
     .table-book {
         width: 80%;
@@ -18,7 +17,7 @@
     }
 
     th {
-        background-color: #4A90E2; /* لون رأس الجدول أزرق */
+        background-color: #4A90E2;
         color: white;
         border: 1px solid #ddd;
         padding: 12px;
@@ -30,11 +29,11 @@
     }
 
     tr:nth-child(even) {
-        background-color: #f2f2f2; /* لون خفيف للصفوف الزوجية */
+        background-color: #f2f2f2;
     }
 
     tr:hover {
-        background-color: #E1E8F0; /* لون عند تمرير الماوس */
+        background-color: #E1E8F0;
         transition: background-color 0.3s;
     }
 </style>
@@ -50,18 +49,12 @@
     </tr>
     {% for book in books %}
     <tr>
-        <td>{{book.id}}</td>
-        <td>{{book.title}}</td>
-        <td>{{book.author}}</td>
+        <td>{{ book.id }}</td>
+        <td>{{ book.title }}</td>
+        <td>{{ book.author }}</td>
     </tr>
     {% endfor %}
-
-    <!-- صف اختبار -->
-    <tr>
-        <td>Testing Row 1</td>
-        <td>Testing Row 2</td>
-        <td>Testing Row 3</td>
-    </tr>
 </table>
 
 {% endblock content %}
+
